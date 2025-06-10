@@ -1,12 +1,12 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-     font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 h1, h2, h3 {
@@ -21,6 +21,7 @@ h1, h2, h3 {
   --hover-color: #00FFB2;
   --border-color: #2A2A2A;
   --alt-bg: #1A1A2E;
+  --hover-secondary: #FF5733;
 }
 
 body {
@@ -39,129 +40,131 @@ a:hover {
 
 
 .navegacao {
-    position: fixed;
-    background: rgba(26, 26, 46, 0.8);
-    width: 100%;
-    z-index: 100;
-    padding: 1.5rem;
+  position: fixed;
+  background: rgba(26, 26, 46, 0.8);
+  width: 100%;
+  z-index: 100;
+  padding: 1.5rem;
 }
 
 .menu {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    gap: 3rem;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 3rem;
 }
 
 .menu-link {
-    text-decoration: none;
-    color: var(--text-primary);
-    font-weight: 500;
-    position: relative;
-    padding: 0.5rem 0;
+  text-decoration: none;
+  color: var(--text-primary);
+  font-weight: 500;
+  position: relative;
+  padding: 0.5rem 0;
 }
 
 .menu-link::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100;
-    height: 2px;
-    background-color: var(--accent-color);
-    transition: width 0.5s ease;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100;
+  height: 2px;
+  background-color: var(--accent-color);
+  transition: width 0.5s ease;
 }
 
 .menu-link:hover::after {
-    width: 100%;
+  width: 100%;
+}
+
+.github-icon{
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 100;
+  width: 50px;
 }
 
 .cabecalho {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .foto-perfil {
-    width: 100%;
-    max-width: 350px;
-    height: 350px;
-    border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 0 0 20px rgba(79, 195, 247, 0.8);
-    margin: 100px auto 0 auto;
-    display: block;
-    animation : flutuar 5s ease-in-out infinite;
+  width: 100%;
+  max-width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 20px rgba(79, 195, 247, 0.8);
+  margin: 100px auto 0 auto;
+  display: block;
+  animation : flutuar 5s ease-in-out infinite;
 }
 
 h1{
-    font-size: 3rem;
-    margin-top: 20px;
-    color: var(--text-primary);
+  font-size: 3rem;
+  margin-top: 20px;
+  color: var(--text-primary);
 }
 
 h2 {
-    font-size: 2rem;
-    margin-top: 5px;
-    color: var(--text-secondary);
+  font-size: 2rem;
+  margin-top: 5px;
+  color: var(--text-secondary);
 }
 
+/* Estilos para a seção "Sobre"*/
 .sobre {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    padding: 2rem;
-    background-color: var(--alt-bg);
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(79, 195, 247, 0.6);
-    margin: 2rem auto;
-    width: 100%;
-    max-width: 800px;
-    box-sizing: border-box;
+  padding: 6rem 2rem;
 }
 
 .sobre-caixa {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    padding: 2rem;
-    background-color: var(--alt-bg);
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(79, 195, 247, 0.8);
-    width: 90%;
+  padding: 2rem ;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: var(--alt-bg);
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 0 20px rgba(79, 195, 247, 0.8);
+}
+
+.sobre-titulo {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 35px;
+  color: var(--text-primary);
 }
 
 .sobre-paragrafo {
-    text-align: center;
-    font-size: 1rem;
-    line-height: 1.5;
-    color: var(--text-secondary);
-    max-width: 600px;
-    margin: 0 auto;
+  text-align: justify;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  max-width: 700px;
+  margin: 0 auto;
 }
 
+/* Estilos para a seção "Projetos" */
 .projetos {
-    padding: 6rem 2rem;
+  padding: 6rem 2rem;
 }
 
 .projetos-titulo {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 35px;
-    color: var(--text-primary);
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 35px;
+  color: var(--text-primary);
 }
 
 .projetos-card:hover {
-    box-shadow: 0 0 20px rgba(79, 195, 247, 0.8);
-    transform: translateY(-10px) scale(1.03);
-    transition: all 0.5s ease;
-    cursor: pointer;
+  box-shadow: 0 0 20px rgba(79, 195, 247, 0.8);
+  transform: translateY(-10px) scale(1.03);
+  transition: all 0.5s ease;
+  cursor: pointer;
 }
 
 .projetos-caixa {
@@ -189,69 +192,225 @@ h2 {
 }
 
 .projetos-imagem{
-    width: 100%;
-    height: 200px;
-    border-radius: 10px;
-    object-fit: cover;
-    display: block;
-    box-shadow: 0 0 10px rgba(79, 195, 247, 0.5);
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 0 10px rgba(79, 195, 247, 0.5);
 
 }
 
 .info-projetos {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
-.paragrafo-projeto {
-    font-size: 1rem;
-    line-height: 1.5;
-    color: var(--text-secondary);
+.paragrafo-projetos {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
 }
 
 .caixa-textos-projetos {
-    padding: 1.5rem;
+  padding: 1.5rem;
 }
 
+/* Estilos para a seção "Cursos"*/
+.certificados {
+  padding: 6rem 2rem;
+}
+
+.certificados-titulo {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 35px;
+  color: var(--text-primary);
+}
+
+.certificados-caixa {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 20px rgba(79, 195, 247, 0.8);
+  padding: 1rem;
+  background-color: var(--alt-bg);
+}
+
+.flip-card-front {
+  color: var(--text-primary);
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+  background-color: var(--alt-bg);
+}
+
+.logo-alura {
+  max-width: 45%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.logo-udemy {
+  max-width: 60%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.cursos-titulo {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 35px;
+  color: var(--text-primary);
+}
+.certificados {
+  padding: 6rem 2rem;
+}
+
+.certificados-titulo {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 35px;
+  color: var(--text-primary);
+}
+
+.certificados-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.certificados-caixa {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.certificados-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  width: 300px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.caixa-textos-certificados {
+  padding: 1rem;
+  text-align: center;
+}
+
+.info-certificados {
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+}
+
+.paragrafo-certificados {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.paragrafo-atualizacao {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--hover-color);
+  margin-bottom: 1rem;
+}
+
+.paragrafo-atualizacao-{
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--hover-secondary);
+  margin-bottom: 1rem;
+}
+
+
+/* Estilos para a seção "Contato"*/
 .contatos{
-    padding: 6rem 2rem;
+  padding: 6rem 2rem;
 }
 
 .contatos-titulo {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 35px;
-    color: var(--text-primary);
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 35px;
+  color: var(--text-primary);
 }
 
 .formulario-contato {
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: var(--alt-bg);
-    backdrop-filter: blur(5px);
-    padding: 2rem;
-    border: 1px solid var(--border-color);
-    border-radius: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: var(--alt-bg);
+  backdrop-filter: blur(5px);
+  padding: 2rem;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
 }
 
 .grupo-form {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 .campo-form {
-    width: 100%;
-    padding: 1rem;
-    border: 1px solid var(--border-color);
-    border-radius: 10px;
-    background-color: var(--bg-color);
-    outline: none;
-    color: var(--text-secondary);
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  background-color: var(--bg-color);
+  outline: none;
+  color: var(--text-secondary);
 }
 
 .campo-form:focus {
-    border-color: var(--accent-color);
-    box-shadow: 0 0 10px rgba(79, 195, 247, 0.5);
+  border-color: var(--accent-color);
+  box-shadow: 0 0 10px rgba(79, 195, 247, 0.5);
 }
-
+/* Estilos para o button */
 /* From Uiverse.io by cssbuttons-io */ 
 .c-button {
   color: #ffffff;
@@ -333,16 +492,16 @@ h2 {
   z-index: -1;
   pointer-events: none;
   background:
-    radial-gradient(circle at 10% 20%, var(--accent-color) 0%, transparent 20%),
-    radial-gradient(circle at 90% 80%, var(--hover-color) 0%, transparent 20%),
-    var(--border-color);
+  radial-gradient(circle at 10% 20%, var(--accent-color) 0%, transparent 20%),
+  radial-gradient(circle at 90% 80%, var(--hover-color) 0%, transparent 20%),
+  var(--border-color);
 }
 
 @keyframes flutuar {
-    0%, 100% {
-      transform: translateY(0);
+  0%, 100% {
+    transform: translateY(0);
     }
-    50% {
-      transform: translateY(-20px);
-    }
+  50% {
+    transform: translateY(-20px);
+  }
 }
