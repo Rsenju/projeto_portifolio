@@ -7,7 +7,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <title>Rebeca Machado | Portifólio</title>
 </head>
+
 <body>
+    <div class="particulas"></div>
     <nav class="navegacao">
         <ul class="menu">
             <li>
@@ -76,15 +78,61 @@
     </section>
 
     <section id="contatos" class="contatos">
-        <h2 class="contatos-titulo">Contatos</h2>
-        <form action="" class="formulario-contato" id="formulario">
+        <h2 class="contatos-titulo">Entre em Contato</h2>
+        <form action="" class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
             <div class="nome-form">
-                <input placeholder="Nome"  class="campo-form">
+                <input placeholder="Nome"  class="campo-form" id="nome">
             </div>
             <div class="grupo-form">
-                <textarea class="tex-form" placeholder="Digite sua Mensagem"></textarea>
+                <textarea class="campo-form" placeholder="Digite sua Mensagem" rows="6" id="mensagem"></textarea>
             </div>
+                        
+            <button type="submit" class="c-button c-button--gooey">
+            Enviar Mensagem
+            <div class="c-button__blobs">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            </button>
+
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: block; height: 0; width: 0;">
+            <defs>
+                <filter id="goo">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
+                <feColorMatrix in="blur" mode="matrix"
+                    values="1 0 0 0 0  
+                            0 1 0 0 0  
+                            0 0 1 0 0  
+                            0 0 0 18 -7" result="goo"></feColorMatrix>
+                <feBlend in="SourceGraphic" in2="goo"></feBlend>
+                </filter>
+            </defs>
+            </svg>
         </form>
     </section>
+
+    <script>
+        function enviarWhats(event) {
+            event.preventDefault();
+
+        const nome = document.getElementById('nome').value.trim();
+        const mensagem = document.getElementById('mensagem').value.trim();
+        const telefone = '5571994043159'
+
+        if (!nome || !mensagem) {
+            alert('Por favor, preencha todos os campos.')
+            return;
+        }
+
+        const texto =  `Olá! Me chamo ${nome}, ${mensagem}`
+        const msgFormatada = encodeURIComponent(texto)
+
+        const url = `https://api.whatsapp.com/send?phone=${telefone}&text=${msgFormatada}`
+
+        window.open(url, '_blank');
+    }
+    </script>
+
 </body>
 </html>

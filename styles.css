@@ -93,6 +93,7 @@ a:hover {
     box-shadow: 0 0 20px rgba(79, 195, 247, 0.8);
     margin: 100px auto 0 auto;
     display: block;
+    animation : flutuar 5s ease-in-out infinite;
 }
 
 h1{
@@ -209,4 +210,139 @@ h2 {
 
 .caixa-textos-projetos {
     padding: 1.5rem;
+}
+
+.contatos{
+    padding: 6rem 2rem;
+}
+
+.contatos-titulo {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 35px;
+    color: var(--text-primary);
+}
+
+.formulario-contato {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--alt-bg);
+    backdrop-filter: blur(5px);
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+}
+
+.grupo-form {
+    margin-bottom: 5px;
+}
+
+.campo-form {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    background-color: var(--bg-color);
+    outline: none;
+    color: var(--text-secondary);
+}
+
+.campo-form:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 10px rgba(79, 195, 247, 0.5);
+}
+
+/* From Uiverse.io by cssbuttons-io */ 
+.c-button {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 0.9em 1.6em;
+  cursor: pointer;
+  display: block;
+  margin: 1rem auto;
+  position: relative;
+  z-index: 1;
+  background: transparent;
+  text-align: center;
+}
+
+.c-button--gooey {
+  color: #4fc3f7;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: 3px solid #4fc3f7;
+  border-radius: 0.4em;
+  position: relative;
+  transition: all 900ms ease;
+}
+
+.c-button--gooey .c-button__blobs {
+  height: 100%;
+  filter: url(#goo);
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: -3px;
+  right: -1px;
+  z-index: -1;
+}
+
+.c-button--gooey .c-button__blobs div {
+  background-color: #1479ea;
+  width: 34%;
+  height: 100%;
+  border-radius: 100%;
+  position: absolute;
+  transform: scale(1.4) translateY(125%) translateZ(0);
+  transition: all 700ms ease;
+}
+
+.c-button--gooey .c-button__blobs div:nth-child(1) {
+  left: -5%;
+}
+
+.c-button--gooey .c-button__blobs div:nth-child(2) {
+  left: 30%;
+  transition-delay: 60ms;
+}
+
+.c-button--gooey .c-button__blobs div:nth-child(3) {
+  left: 66%;
+  transition-delay: 25ms;
+}
+
+.c-button--gooey:hover {
+  color: #ffffff;
+  background-color: #1479ea;
+  border-color: #1479ea;
+}
+
+.c-button--gooey:hover .c-button__blobs div {
+  transform: scale(1.4) translateY(0) translateZ(0);
+}
+
+.particulas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 10% 20%, var(--accent-color) 0%, transparent 20%),
+    radial-gradient(circle at 90% 80%, var(--hover-color) 0%, transparent 20%),
+    var(--border-color);
+}
+
+@keyframes flutuar {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
 }
