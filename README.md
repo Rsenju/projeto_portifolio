@@ -29,4 +29,8 @@ Este projeto tem como finalidade ser uma **vitrine do meu trabalho** e evoluçã
 
 Se quiser entrar em contato, é só utilizar o formulário no site — a mensagem será enviada diretamente para meu WhatsApp. Também estou disponível via GitHub ou outras redes sociais listadas no portfólio.
 
+## 📸 Preview
+
+(imagem do projeto)
+
 ---
