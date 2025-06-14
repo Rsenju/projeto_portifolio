@@ -34,3 +34,41 @@ Se quiser entrar em contato, é só utilizar o formulário no site — a mensage
 (imagem do projeto)
 
 ---
+
+Portfolio Project
+
+This repository contains a front-end project designed to showcase my skills as a junior front-end developer.
+
+📋 About the Project
+The project includes information about courses I have completed and features a contact form that allows visitors to send messages directly to my WhatsApp.
+
+Its main purpose is to demonstrate what I can do with front-end technologies and to serve as a practical portfolio piece.
+
+💡 Features
+Information about my courses
+
+A functional contact form connected to WhatsApp for quick messaging
+
+Responsive design and clean layout
+
+Developed using HTML, CSS, and JavaScript (if applicable)
+
+🎯 Objective
+The goal is to present my abilities as a junior front-end developer and provide an easy way for potential clients or employers to get in touch.
+
+🛠️ Technologies Used
+HTML5
+
+CSS3
+
+JavaScript (if used)
+
+WhatsApp integration for contact form
+
+📁 Project Structure
+bash
+Copiar
+Editar
+/css            # CSS stylesheets  
+/ js            # JavaScript files (if any)  
+index.html      # Main HTML page
